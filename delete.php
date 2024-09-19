@@ -8,7 +8,7 @@ if (isset($_GET['id'])) {
     $sql = "DELETE FROM colaboracao_caixa WHERE id='$id'";
     
     if ($conn->query($sql) === TRUE) {
-        header('Location: index.php');
+        header('Location: cont.php');
         exit();
     } else {
         echo "Erro ao excluir registro: " . $conn->error;

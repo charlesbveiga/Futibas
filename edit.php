@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['edit_id'])) {
     $sql = "UPDATE colaboracao_caixa SET nome='$nome', jan='$jan', fev='$fev' WHERE id='$id'";
     
     if ($conn->query($sql) === TRUE) {
-        header('Location: index.php');
+        header('Location: cont.php');
         exit();
     } else {
         echo "Erro ao editar registro: " . $conn->error;
